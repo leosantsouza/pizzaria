@@ -13,7 +13,7 @@ export function isAuthenticated(
 
   // RECEBER O TOKEN
   const authToken = req.headers.authorization;
-
+  // Se nao houver token, requisicao negada.
   if(!authToken){
     return res.status(401).end();
   }
@@ -26,6 +26,8 @@ export function isAuthenticated(
       token, 
       process.env.JWT_SECRET
       ) as PayLoad;
+
+      req.user_id = sub;
     
     return next();
 

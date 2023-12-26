@@ -6,4 +6,4 @@ class DetailUserService {
   }
 }
 
-export { DetailUserService }
+export { DetailUserService } 
