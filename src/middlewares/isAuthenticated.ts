@@ -5,11 +5,7 @@ interface PayLoad {
   sub: string;
 }
 
-export function isAuthenticated(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
+export function isAuthenticated(  req: Request,  res: Response,  next: NextFunction) {
   // RECEBER O TOKEN
   const authToken = req.headers.authorization;
   // Se nao houver token, requisicao negada.
